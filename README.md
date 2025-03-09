@@ -23,11 +23,13 @@ Este projeto consiste na criação de uma plataforma online para um minimercado,
 - **Funcionalidades Interativas**:
   - Implementação de interatividade utilizando JavaScript para melhorar a experiência do usuário.
 
+<br>
 
 ### 🛠️ Tecnologias Utilizadas
 - **HTML5**: Estruturação do conteúdo.
 - *Aguarde...*
 
+<br>
 
 ### 🎯 Como Executar o Projeto
 1. **Clonar o Repositório**:
