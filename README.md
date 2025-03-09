@@ -5,7 +5,7 @@ Este projeto consiste na criação de uma plataforma online para um minimercado,
 
 ## Sobre o projeto:
 
-### 🎮 Funcionalidades
+### 🎮 Funcionalidades:
 #### Fase 1: Estruturação (HTML)
 - **Visualização de Produtos**:
   - *Frutas e Verduras*: Dois produtos com imagem, descrição e valor.
@@ -25,13 +25,13 @@ Este projeto consiste na criação de uma plataforma online para um minimercado,
 
 <br>
 
-### 🛠️ Tecnologias Utilizadas
+### 🛠️ Tecnologias Utilizadas:
 - **HTML5**: Estruturação do conteúdo.
 - *Aguarde...*
 
 <br>
 
-### 🎯 Como Executar o Projeto
+### 🎯 Como Executar o Projeto:
 1. **Clonar o Repositório**:
   ```bash
   git clone https://github.com/gabrielzfn/projeto-Minimercado.git
