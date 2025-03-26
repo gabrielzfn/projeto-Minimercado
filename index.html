@@ -3,104 +3,358 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Minimercado Online - Compre frutas, verduras, alimentos e produtos de higiene com entrega em domicílio">
     <title>Minimercado Online</title>
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- CSS Customizado -->
+    <link href="css/style.css" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="icon" href="assets/favIcon.png" type="image/x-icon">
 </head>
+
+
 <body>
-    
     <!-- Cabeçalho (header) -->
-    ><header>
-        <h1>Minimercado Online</h1>
-        <nav>
-            <ul>
-                <li><a href="#frutas-verduras">Frutas e Verduras</a></li>
-                <li><a href="#alimentos-nao-pereciveis">Alimentos não perecíveis</a></li>
-                <li><a href="#higiene-limpeza">Higiene e Limpeza</a></li>
-                <li><a href="#servicoes">Serviços</a></li>
-            </ul>
-        </nav>
+    <header class="bg-success text-white py-3">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h1 class="mb-0">Minimercado Online</h1>
+                </div>
+                <div class="col-md-6">
+                    <nav>
+                        <ul class="nav justify-content-end">
+                            <li class="nav-item"><a class="nav-link text-white" href="#frutas-verduras">Frutas e Verduras</a></li>
+                            <li class="nav-item"><a class="nav-link text-white" href="#alimentos-nao-pereciveis">Alimentos não perecíveis</a></li>
+                            <li class="nav-item"><a class="nav-link text-white" href="#higiene-limpeza">Higiene e Limpeza</a></li>
+                            <li class="nav-item"><a class="nav-link text-white" href="#servicos">Serviços</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
     </header>
 
-    <main>
-        <!-- Seção de Frutas e Verduras -->
-        <section id="frutas-verduras">
-            <h2>Frutas e Verduras</h2>
-            <div>
-                <h3>Maça</h3>
-                <img src="assets/imagem-maçã.jpeg" alt="Maçã" width="100">
-                <p>Descrição: Maçã vermelha, fresca e suculenta.</p>
-                <p>Valor: R$8,99/kg</p>
+    <main class="container my-5">
+        <!-- Carrossel de Destaques -->
+        <section class="mb-5">
+            <div id="carouselProdutos" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselProdutos" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#carouselProdutos" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#carouselProdutos" data-bs-slide-to="2"></button>
+                </div>
+
+
+                <div class="carousel-inner rounded">
+                    <div class="carousel-item active">
+                        <img src="assets/destaque-frutas.jpg" class="d-block w-100" alt="Destaque de frutas frescas e variadas">
+                        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50">
+                            <h5>Frutas Frescas</h5>
+                            <p>As melhores frutas selecionadas para você</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/destaque-promocao.jpg" class="d-block w-100" alt="Promoção especial em alimentos não perecíveis">
+                        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50">
+                            <h5>Promoção Especial</h5>
+                            <p>Descontos em alimentos não perecíveis</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/destaque-entrega.jpg" class="d-block w-100" alt="Serviço de entrega rápida e eficiente">
+                        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50">
+                            <h5>Entrega Rápida</h5>
+                            <p>Receba seus produtos no conforto de casa</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselProdutos" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselProdutos" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                    <span class="visually-hidden">Próximo</span>
+                </button>
             </div>
-            <div>
-                <h3>Alface</h3>
-                <img src="assets/imagem-alface.jpeg" alt="Alface" width="100">
-                <p>Descrição: Alface americana, fresquinha e orgânica.</p>
-                <p>Valor: R$6,90/unidade</p>
+        </section>
+
+        <!-- Seção de Frutas e Verduras -->
+        <section id="frutas-verduras" class="mb-5">
+            <h2 class="text-center mb-4">Frutas e Verduras</h2>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <img src="assets/imagem-maçã.jpeg" class="card-img-top" alt="Maçã vermelha fresca sobre mesa de madeira">
+                        <div class="card-body">
+                            <h3 class="card-title">Maçã</h3>
+                            <p class="card-text">Descrição: Maçã vermelha, fresca e suculenta, colhida diretamente do pomar.</p>
+                            <p class="card-text"><strong>Valor: R$8,99/kg</strong></p>
+                            <button class="btn btn-success" onclick="adicionarAoCarrinho('Maçã', 8.99)">Adicionar ao Carrinho</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <img src="assets/imagem-alface.jpeg" class="card-img-top" alt="Alface americana fresca em feira orgânica">
+                        <div class="card-body">
+                            <h3 class="card-title">Alface</h3>
+                            <p class="card-text">Descrição: Alface americana, fresquinha e orgânica, cultivada sem agrotóxicos.</p>
+                            <p class="card-text"><strong>Valor: R$6,90/unidade</strong></p>
+                            <button class="btn btn-success" onclick="adicionarAoCarrinho('Alface', 6.90)">Adicionar ao Carrinho</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
         <!-- Seção de Alimentos não perecíveis -->
-        <section id="alimentos-nao-pereciveis">
-        <h2>Alimentos não Perecíveis</h2>
-            <div>
-                <h3>Arroz</h3>
-                <img src="assets/imagem-arroz.jpeg" alt="Arroz" width="100">
-                <p>Descrição: Arroz integral, pacote de 5kg.</p>
-                <p>Valor: R$30,00</p>
-            </div>
-            <div>
-                <h3>Feijão</h3>
-                <img src="assets/imagem-feijão.jpeg" alt="Feijão" width="100">
-                <p>Descrição: Feijão carioca, pacote de 1kg.</p>
-                <p>Valor: R$8,00</p>
+        <section id="alimentos-nao-pereciveis" class="mb-5">
+            <h2 class="text-center mb-4">Alimentos não Perecíveis</h2>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <img src="assets/imagem-arroz.jpeg" class="card-img-top" alt="Pacote de arroz integral de 5kg">
+                        <div class="card-body">
+                            <h3 class="card-title">Arroz</h3>
+                            <p class="card-text">Descrição: Arroz integral de alta qualidade, pacote de 5kg, rico em fibras.</p>
+                            <p class="card-text"><strong>Valor: R$30,00</strong></p>
+                            <button class="btn btn-success" onclick="adicionarAoCarrinho('Arroz', 30.00)">Adicionar ao Carrinho</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <img src="assets/imagem-feijão.jpeg" class="card-img-top" alt="Feijão carioca em pacote de 1kg">
+                        <div class="card-body">
+                            <h3 class="card-title">Feijão</h3>
+                            <p class="card-text">Descrição: Feijão carioca, pacote de 1kg, selecionado e de ótima qualidade.</p>
+                            <p class="card-text"><strong>Valor: R$8,00</strong></p>
+                            <button class="btn btn-success" onclick="adicionarAoCarrinho('Feijão', 8.00)">Adicionar ao Carrinho</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
         <!-- Seção de Higiene e Limpeza -->
-        <section id="higiene-limpeza">
-        <h2>Higiene e Limpeza</h2>
-            <div>
-                <h3>Sabão em pó</h3>
-                <img src="assets/imagem-sabão.jpeg" alt="Sabão em pó" width="100">
-                <p>Descrição: Sabão em pó para roupas, 1kg.</p>
-                <p>Valor: R$15,99</p>
-            </div>
-            <div>
-                <h3>Desodorante</h3>
-                <img src="assets/imagem-desodorante.jpeg" alt="Desodorante" width="100">
-                <p>Descrição: Desodorante, antitranspirante e em creme.</p>
-                <p>Valor: R$18,00</p>
+        <section id="higiene-limpeza" class="mb-5">
+            <h2 class="text-center mb-4">Higiene e Limpeza</h2>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <img src="assets/imagem-sabão.jpeg" class="card-img-top" alt="Sabão em pó para roupas embalagem de 1kg">
+                        <div class="card-body">
+                            <h3 class="card-title">Sabão em pó</h3>
+                            <p class="card-text">Descrição: Sabão em pó para roupas, 1kg, remove até as manchas mais difíceis.</p>
+                            <p class="card-text"><strong>Valor: R$15,99</strong></p>
+                            <button class="btn btn-success" onclick="adicionarAoCarrinho('Sabão em pó', 15.99)">Adicionar ao Carrinho</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <img src="assets/imagem-desodorante.jpeg" class="card-img-top" alt="Desodorante antitranspirante em creme">
+                        <div class="card-body">
+                            <h3 class="card-title">Desodorante</h3>
+                            <p class="card-text">Descrição: Desodorante antitranspirante em creme, 48h de proteção, fragrância suave.</p>
+                            <p class="card-text"><strong>Valor: R$18,00</strong></p>
+                            <button class="btn btn-success" onclick="adicionarAoCarrinho('Desodorante', 18.00)">Adicionar ao Carrinho</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
         <!-- Seção de Serviços -->
-        <section id="servicoes">
-        <h2>Serviços</h2>
-            <div>
-                <h3>Retirada no local</h3>
-                <p>Descrição: Retire seu pedido diretamente no Minimercado.</p>
-                <p>Valor: Grátis</p>
-            </div>
-            <div>
-                <h3>Tele-entrega</h3>
-                <p>Descrição: Entrega em domicílio dentro da região.</p>
-                <p>Valor: R$5,00</p>
+        <section id="servicos" class="mb-5">
+            <h2 class="text-center mb-4">Serviços</h2>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h3 class="card-title">Retirada no local</h3>
+                            <p class="card-text">Descrição: Retire seu pedido diretamente no Minimercado, no horário que preferir.</p>
+                            <p class="card-text"><strong>Valor: Grátis</strong></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h3 class="card-title">Tele-entrega</h3>
+                            <p class="card-text">Descrição: Entrega em domicílio dentro da região em até 2 horas após a confirmação do pedido.</p>
+                            <p class="card-text"><strong>Valor: R$5,00</strong></p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
+
+        <!-- Formulário de Cadastro e Agendamento -->
+        <section id="cadastro" class="mb-5 p-4 bg-light rounded">
+            <h2 class="text-center mb-4">Cadastro e Agendamento</h2>
+            <form id="formCadastro" onsubmit="validarFormulario(event)">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h4>Dados Pessoais</h4>
+                        <div class="mb-3">
+                            <label for="nome" class="form-label">Nome Completo*</label>
+                            <input type="text" class="form-control" id="nome" required placeholder="Digite seu nome completo">
+                        </div>
+                        <div class="mb-3">
+                            <label for="cpf" class="form-label">CPF*</label>
+                            <input type="text" class="form-control" id="cpf" required placeholder="000.000.000-00" oninput="formatarCPF(this)">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Sexo</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="sexo" id="masculino" value="masculino">
+                                <label class="form-check-label" for="masculino">Masculino</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="sexo" id="feminino" value="feminino">
+                                <label class="form-check-label" for="feminino">Feminino</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="sexo" id="outro" value="outro">
+                                <label class="form-check-label" for="outro">Outro</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h4>Contato e Endereço</h4>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">E-mail*</label>
+                            <input type="email" class="form-control" id="email" required placeholder="seu@email.com">
+                        </div>
+                        <div class="mb-3">
+                            <label for="telefone" class="form-label">Telefone*</label>
+                            <input type="tel" class="form-control" id="telefone" required placeholder="(00) 00000-0000" oninput="formatarTelefone(this)">
+                        </div>
+                        <div class="mb-3">
+                            <label for="endereco" class="form-label">Endereço Completo*</label>
+                            <textarea class="form-control" id="endereco" rows="2" required placeholder="Rua, número, complemento, bairro"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mt-3">
+                    <div class="col-md-6">
+                        <h4>Tipo de Serviço</h4>
+                        <div class="mb-3">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="servico" id="retirada" value="retirada" checked>
+                                <label class="form-check-label" for="retirada">Retirada no Local</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="servico" id="entrega" value="entrega">
+                                <label class="form-check-label" for="entrega">Tele-entrega</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h4>Agendamento</h4>
+                        <div class="mb-3">
+                            <label for="data" class="form-label">Data*</label>
+                            <input type="date" class="form-control" id="data" required min="">
+                        </div>
+                        <div class="mb-3">
+                            <label for="horario" class="form-label">Horário*</label>
+                            <select class="form-select" id="horario" required>
+                                <option value="" selected disabled>Selecione um horário</option>
+                                <option value="08:00-12:00">Manhã (08:00 - 12:00)</option>
+                                <option value="12:00-16:00">Tarde (12:00 - 16:00)</option>
+                                <option value="16:00-20:00">Noite (16:00 - 20:00)</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="termos" required>
+                    <label class="form-check-label" for="termos">Li e aceito os termos de uso e política de privacidade*</label>
+                </div>
+
+                <div class="d-grid gap-2">
+                    <button type="submit" class="btn btn-success btn-lg">Finalizar Cadastro</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- Carrinho de Compras (modal) -->
+        <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+            <button type="button" class="btn btn-success btn-lg rounded-pill" data-bs-toggle="modal" data-bs-target="#carrinhoModal">
+                <i class="bi bi-cart"></i> <span id="contadorCarrinho">0</span>
+            </button>
+        </div>
+
+        <!-- Modal do Carrinho -->
+        <div class="modal fade" id="carrinhoModal" tabindex="-1" aria-labelledby="carrinhoModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="carrinhoModalLabel">Seu Carrinho</h5>
+                        <button type="button" class="btn-close" data-bs-close="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <ul id="listaCarrinho" class="list-group mb-3">
+                            <!-- Itens do carrinho serão adicionados aqui via JavaScript -->
+                        </ul>
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h5>Total:</h5>
+                            <h5 id="totalCarrinho">R$ 0,00</h5>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Continuar Comprando</button>
+                        <button type="button" class="btn btn-success" onclick="finalizarCompra()">Finalizar Compra</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
     <!-- Rodapé (footer) -->
-    <footer>
-        <p>&copy; 2025 Minimercado Online. Todos os direitos reservados.</p>
-        <p>Contato: contato@minimercadoonline.com  |  Telefone: (51) 5555-6666</p>
-        <nav>
-            <ul>
-                <li><a href="#frutas-verduras">Frutas e Verduras</a></li>
-                <li><a href="#alimentos-nao-pereciveis">Alimentos não Perecíveis</a></li>
-                <li><a href="#higiene-limpeza">Higiene e Limpeza</a></li>
-                <li><a href="#servicoes">Serviços</a></li>
-            </ul>
-        </nav>
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Minimercado Online</h5>
+                    <p>Seu mercado sempre perto de você, mesmo quando você está longe.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contato</h5>
+                    <p>contato@minimercadoonline.com<br>(51) 5555-6666</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Navegação</h5>
+                    <nav>
+                        <ul class="list-unstyled">
+                            <li><a href="#frutas-verduras" class="text-white">Frutas e Verduras</a></li>
+                            <li><a href="#alimentos-nao-pereciveis" class="text-white">Alimentos não Perecíveis</a></li>
+                            <li><a href="#higiene-limpeza" class="text-white">Higiene e Limpeza</a></li>
+                            <li><a href="#servicos" class="text-white">Serviços</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center">
+                <p>&copy; 2025 Minimercado Online. Todos os direitos reservados.</p>
+                <p class="small">Desenvolvido com acessibilidade em mente</p>
+            </div>
+        </div>
     </footer>
 
+    <!-- Bootstrap JS -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- JavaScript Customizado -->
+    <script src="js/script.js"></script>
 </body>
 </html>
