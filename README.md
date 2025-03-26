@@ -26,8 +26,10 @@ Este projeto consiste na criação de uma plataforma online para um minimercado,
 <br>
 
 ### 🛠️ Tecnologias Utilizadas:
-- **HTML5**: Estruturação do conteúdo.
-- *Aguarde...*
+- **CSS**: Estilização do projeto;
+- **HTML5**: Estruturação do conteúdo;
+- **JavaScript**: Script das funcionalidades;
+- **Bootstrap**: Design responsivo do projeto.
 
 <br>
 
